@@ -22,10 +22,12 @@ const routes = {
   'addresses': 'https://address-book.mcbride.tech'
 }
 
+const fallbackUrl = 'https://github.com/mikemcbride/mcbride-short-urls'
+
 module.exports = (req, res) => {
   const { pathname } = parse(req.url, true)
   const path = pathname.toLowerCase().trim().replace('/', '')
-  let location = routes[path] || 'https://github.com/mikemcbride/mcbride-short-urls'
+  let location = routes[path] || fallbackUrl
   res.writeHead(302, { 'Location': location })
   res.end()
 }
