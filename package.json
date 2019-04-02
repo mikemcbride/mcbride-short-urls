@@ -1,0 +1,28 @@
+{
+  "name": "mcbride-short-urls",
+  "version": "1.0.0",
+  "description": "url redirect app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "micro-dev",
+    "test": "echo \"lol yeah right\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikemcbride/mcbride-short-urls.git"
+  },
+  "keywords": [
+    "http",
+    "redirect"
+  ],
+  "author": "mikemcbride",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikemcbride/mcbride-short-urls/issues"
+  },
+  "homepage": "https://github.com/mikemcbride/mcbride-short-urls#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  }
+}
