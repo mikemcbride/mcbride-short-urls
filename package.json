@@ -23,6 +23,7 @@
   "homepage": "https://github.com/mikemcbride/mcbride-short-urls#readme",
   "dependencies": {},
   "devDependencies": {
+    "micro": "^9.3.3",
     "micro-dev": "^3.0.0"
   }
 }

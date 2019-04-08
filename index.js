@@ -22,7 +22,7 @@ const routes = {
   'leo-xmas': 'https://smile.amazon.com/baby-reg/michael-mcbride-becky-mcbride-november-2018-ballwin/1IPTVKO44O453'
 }
 
-const fallbackUrl = 'https://github.com/mikemcbride/mcbride-short-urls'
+const fallbackUrl = 'https://pages.mcbride.tech'
 
 module.exports = (req, res) => {
   const { pathname } = parse(req.url, true)
