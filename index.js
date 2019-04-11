@@ -1,33 +1,34 @@
 const { parse } = require('url')
+const routes = require('./routes')
 
-const routes = {
-  'mike': 'https://mikemcbride.me',
-  'mike-bday': 'https://smile.amazon.com/hz/wishlist/ls/1NKT0C1LMV4P7?ref_=wl_share', 
-  'mike-xmas': 'https://smile.amazon.com/hz/wishlist/ls/1NKT0C1LMV4P7?ref_=wl_share',
-  
-  'becky': 'https://putting-on-love.com',
-  'becky-bday': 'https://smile.amazon.com/hz/wishlist/ls/2C16Q3JHY6J00?ref_=wl_share',
-  'becky-xmas': 'https://smile.amazon.com/hz/wishlist/ls/2C16Q3JHY6J00?ref_=wl_share',
-  
-  'rose': 'https://smile.amazon.com/hz/wishlist/ls/MAWRXNA3K831?ref_=wl_share',
-  'rose-bday': 'https://smile.amazon.com/hz/wishlist/ls/MAWRXNA3K831?ref_=wl_share',
-  'rose-xmas': 'https://smile.amazon.com/hz/wishlist/ls/MAWRXNA3K831?ref_=wl_share',
-  
-  'kolbe': 'https://smile.amazon.com/hz/wishlist/ls/3D4RIPZ1P14C8?ref_=wl_share',
-  'kolbe-bday': 'https://smile.amazon.com/hz/wishlist/ls/3D4RIPZ1P14C8?ref_=wl_share',
-  'kolbe-xmas': 'https://smile.amazon.com/hz/wishlist/ls/3D4RIPZ1P14C8?ref_=wl_share',
-  
-  'leo': 'https://smile.amazon.com/baby-reg/michael-mcbride-becky-mcbride-november-2018-ballwin/1IPTVKO44O453',
-  'leo-bday': 'https://smile.amazon.com/baby-reg/michael-mcbride-becky-mcbride-november-2018-ballwin/1IPTVKO44O453',
-  'leo-xmas': 'https://smile.amazon.com/baby-reg/michael-mcbride-becky-mcbride-november-2018-ballwin/1IPTVKO44O453'
-}
+const htmlRoutes = Object.entries(routes).map(([k, v]) => `<a href="${v}">${k}</a>`).join('')
 
-const fallbackUrl = 'https://pages.mcbride.tech'
+const html = `<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mcbrid.es</title>
+    <style>body{font-family:system-ui,BlinkMacSystemFont,-apple-system,sans-serif;font-size:16px;margin:0;padding: 3rem;}main{max-width:40em;width:100%}h3{font-weight:600;margin-top:0;margin-bottom:1em}a{color:#4763ff;display:inline-block;font-family:monospace;margin-bottom:1rem;text-decoration:none}a:not(:last-child){border-right:1px solid #aaa;margin-right:1rem;padding-right:1rem}a:focus,a:hover{text-decoration:underline}</style>
+  </head>
+  <body>
+    <main>
+      <h3>mcbrid.es url directory</h3>
+      ${htmlRoutes}
+    </main>
+  </body>
+</html>`
 
 module.exports = (req, res) => {
   const { pathname } = parse(req.url, true)
   const path = pathname.toLowerCase().trim().replace('/', '')
-  let location = routes[path] || fallbackUrl
-  res.writeHead(302, { 'Location': location })
+  
+  if (routes[path] !== undefined) {
+    res.writeHead(302, { 'Location': routes[path] })
+  } else {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    res.write(html)
+  }
+  
   res.end()
 }
