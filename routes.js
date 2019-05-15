@@ -19,6 +19,5 @@ module.exports = {
   'leo-bday': 'https://smile.amazon.com/baby-reg/michael-mcbride-becky-mcbride-november-2018-ballwin/1IPTVKO44O453',
   'leo-xmas': 'https://smile.amazon.com/baby-reg/michael-mcbride-becky-mcbride-november-2018-ballwin/1IPTVKO44O453',
 
-  'hftc': 'https://secure.headforthecure.org/site/TR/Events/General?team_id=11086&pg=team&fr_id=1672',
-  'hftc-donate': 'http://events.headforthecure.org/goto/mikemcbride'
+  'hftc': 'http://events.headforthecure.org/goto/mikemcbride'
 }
