@@ -1,5 +1,5 @@
 const { parse } = require('url')
-const routes = require('./routes')
+const routes = require('./routes.json')
 
 const htmlRoutes = Object.entries(routes).map(([k, v]) => `<a href="${v}">${k}</a>`).join('')
 
