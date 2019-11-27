@@ -7,7 +7,7 @@
     "dev": "now dev"
   },
   "engines": {
-    "node": "^10.x"
+    "node": ">=10.x"
   },
   "repository": {
     "type": "git",
