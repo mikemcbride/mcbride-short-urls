@@ -1,3 +1,0 @@
-module.exports = function(routes) {
-  return `<!DOCTYPE html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>mcbrid.es</title><style>body{font-family:system-ui,sans-serif;padding: 3rem;font-size:16px;}main{max-width:40em;width:100%}h3{font-weight:600;margin-bottom:1em}a{color:#4763ff;display:block;font-family:monospace;margin-bottom:1rem;text-decoration:none}a:focus,a:hover{text-decoration:underline}</style></head><body><main><h3>mcbrid.es url directory</h3>${Object.entries(routes).map(([k, v]) => `<a href="${v}">/${k}</a>`).join('')}</main></body></html>`
-}
