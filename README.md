@@ -2,4 +2,4 @@
 
 Redirects at https://mcbrid.es
 
-It uses Netlify redirects as a super simple URL shortener.
+It's a serverless function deployed to Vercel that performs redirects. Basically like a URL shortener. If the requested path doesn't exist it will render an HTML document listing all the routes.
