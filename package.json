@@ -1,0 +1,22 @@
+{
+  "name": "mcbride-short-urls",
+  "version": "1.0.0",
+  "description": "url redirect app",
+  "engines": {
+    "node": ">=14.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikemcbride/mcbride-short-urls.git"
+  },
+  "keywords": [
+    "http",
+    "redirect"
+  ],
+  "author": "mikemcbride",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikemcbride/mcbride-short-urls/issues"
+  },
+  "homepage": "https://github.com/mikemcbride/mcbride-short-urls#readme"
+}
