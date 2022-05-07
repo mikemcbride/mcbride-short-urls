@@ -7,9 +7,7 @@ module.exports = (req, res) => {
     if (routes[path] !== undefined) {
         res.writeHead(302, { 'Location': routes[path] })
     } else {
-        const html = require('./_buildHtml')(routes)
-        res.writeHead(200, { 'Content-Type': 'text/html' })
-        res.write(html)
+        res.status(404).json({ message: 'Not Found' })
     }
 
     res.end()
