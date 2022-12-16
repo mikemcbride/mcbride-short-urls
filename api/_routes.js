@@ -1,5 +1,5 @@
 module.exports = {
-    "xmas": "https://christmas-2020.mcbrid.es",
+    "xmas": "https://christmas.mcbrid.es",
     "mike": "https://smile.amazon.com/hz/wishlist/ls/1NKT0C1LMV4P7?ref_=wl_share",
     "becky": "https://smile.amazon.com/hz/wishlist/ls/2C16Q3JHY6J00?ref_=wl_share",
     "rose": "https://smile.amazon.com/hz/wishlist/ls/MAWRXNA3K831?ref_=wl_share",
