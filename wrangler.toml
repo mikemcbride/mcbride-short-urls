@@ -1,6 +1,6 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "mcbride-short-urls"
-main = "worker.js"
+main = "src/index.js"
 compatibility_date = "2024-12-16"
 compatibility_flags = ["nodejs_compat"]
 

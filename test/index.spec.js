@@ -1,6 +1,6 @@
 import { env, createExecutionContext, waitOnExecutionContext, SELF } from 'cloudflare:test';
 import { describe, it, expect } from 'vitest';
-import worker from '../worker.js';
+import worker from '../src';
 
 describe('Short URL redirect worker', () => {
 	const validRequest = "https://example.com/xmas";
